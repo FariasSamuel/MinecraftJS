@@ -73,8 +73,7 @@ export default function ToDo(props) {
             
             <ul>
                 {state.list.filter(item=> item.done !== state.currentList).map((item) => {
-                    const c = (item.done) ? "done" : "notdone"
-                    return <ToDoItem key = {item.id} className={c} item={item} setState={setState} state={state} />
+                    return <ToDoItem key = {item.id}  item={item} setState={setState} state={state} />
                 })}
 
             </ul>
